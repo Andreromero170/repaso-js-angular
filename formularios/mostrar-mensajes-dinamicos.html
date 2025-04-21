@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mensajes.css">
+  <title>Mensajes Dinamicos</title>
+</head>
+
+<body>
+
+  <form class="formulario">
+    <input type="text" id="email" placeholder="Correo">
+    <button id="btn" type="submit">Enviar</button>
+  </form>
+
+  
+  <div id="mensaje"></div>
+  <script>
+    let form = document.querySelector(".formulario");
+    let btn = document.querySelector("#btn");
+    function validar() {
+ 
+      let email = document.getElementById("email").value;
+      let mensaje = document.getElementById("mensaje");
+    
+      if (!email.includes("@")) {
+        mensaje.classList.add("mensajeInvalido");
+        mensaje.innerText = "Correo inválido";
+      } else {
+        mensaje.classList.remove("mensajeInvalido");
+        mensaje.classList.add("mensajeCorrecto");
+        mensaje.innerText = "Correo enviado correctamente";
+        mensaje.style.color = "green";
+      }
+    }
+
+    btn.addEventListener("click",function(event){
+    event.preventDefault();
+    validar();
+
+    });
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Propagation Ejemplo</title>
+</head>
+
+<body>
+
+    <style>
+        div {
+            height: 400px;
+            width: 100%;
+            background-color: rgb(109, 27, 186);
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            
+            background-color: rgb(220, 220, 9);
+            color: blue;
+            font-size:16px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+    <div onclick="alert('Div clickeado')">
+        <button onclick="event.stopPropagation(); alert('Botón clickeado')">Clic aquí</button>
+    </div>
+
+
+</body>
+
+</html>

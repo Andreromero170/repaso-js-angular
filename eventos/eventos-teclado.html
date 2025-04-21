@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos de Teclado</title>
+</head>
+<body>
+  <h1>Presiona una tecla</h1>
+  <p id="output">Esperando una tecla...</p>
+
+  <script>
+    const output = document.getElementById('output');
+
+    // Cuando se presiona una tecla
+    document.addEventListener('keydown', (event) => {
+      output.innerHTML = `
+        <strong>keydown</strong><br>
+        Tecla: ${event.key}<br>
+        Código: ${event.code}<br>
+        Shift: ${event.shiftKey}<br>
+        Ctrl: ${event.ctrlKey}<br>
+        Alt: ${event.altKey}
+      `;
+    });
+
+    // Cuando se suelta una tecla
+    document.addEventListener('keyup', (event) => {
+      console.log(`Soltaste la tecla: ${event.key}`);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Propagation Ejemplo</title>
+</head>
+
+<body>
+
+  <!-- Fondo oscuro -->
+<div id="fondo" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+background: rgba(0,0,0,0.6);" onclick="cerrarModal()">
+
+<!-- Contenido del modal -->
+<div onclick="event.stopPropagation()" 
+  style="margin: 100px auto; padding: 20px; background: white; width: 300px;">
+<h2>Modal</h2>
+<p>Haz clic fuera para cerrarlo, pero dentro NO.</p>
+<button onclick="cerrarModal()">Cerrar</button>
+</div>
+
+</div>
+
+<script>
+function cerrarModal() {
+document.getElementById("fondo").style.display = "none";
+}
+</script>
+
+
+
+</body>
+
+</html>

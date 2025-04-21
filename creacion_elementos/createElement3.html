@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Insert Before: Orden de Elementos</h1>
+
+    <ul id="miLista">
+        <li>Elemento existente</li>
+    </ul>
+
+
+    <div id="contenedor"></div>
+
+    <script>
+
+        let lista = document.getElementById("miLista");
+        let nuevoItem = document.createElement("li");
+        nuevoItem.textContent = "Elemento antes del primero";
+
+        let primerItem = lista.firstElementChild;
+        lista.insertBefore(nuevoItem, primerItem); // Lo inserta antes del primer <li>
+
+
+
+        //otros ordenamientos
+        let div = document.getElementById("contenedor");
+        let nuevo = document.createElement("p");
+        nuevo.textContent = "Soy nuevo";
+
+        div.insertAdjacentElement("afterbegin", nuevo); // Lo pone al principio del div
+
+        //Actualizacion de elemento
+        let nuevoLi = document.createElement("li");
+        nuevoLi.textContent = "Reemplazo";
+        lista.replaceChild(nuevoLi, lista.children[0]);
+
+
+    </script>
+</body>
+
+</html>

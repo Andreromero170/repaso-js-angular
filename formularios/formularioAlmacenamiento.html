@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Almacenamiento</title>
+</head>
+
+<body>
+
+    <style>
+        h2{
+            text-align: center;
+            font-size: 45px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            height:200px;
+            width:300px;
+            border-radius: 20px;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background-color:blue;
+        }
+        form input{
+            border-radius:5px;
+            margin-bottom:10px;
+            width:70%;
+            height:30px;
+        }
+        form button{
+            width:70%;
+            height:25px;
+            margin-bottom:7px;
+        }
+    </style>
+    <h2>Local Storage JS</h2>
+
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Tu nombre">
+        <button id="btnGuardar">Guardar</button>
+        <button id="btnMostrar">Mostrar</button>
+        <button id="btnEliminar">Eliminar</button>
+        <button id="btnEliminarTodo">Eliminar Todo</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        let form = document.querySelector("#formulario");
+        let btnGuardar = document.querySelector("#btnGuardar");
+        let btnMostrar = document.querySelector("#btnMostrar");
+        function guardar() {
+            let nombre = document.getElementById("nombre").value;
+
+            // Guardar en localStorage (permanece al recargar)
+            localStorage.setItem("usuario", nombre);
+             document.getElementById("nombre").value="";
+
+            // También puedes probar con sessionStorage
+            // sessionStorage.setItem("usuario", nombre);
+        }
+
+        function mostrar() {
+            const nombre = localStorage.getItem("usuario");
+            // const nombre = sessionStorage.getItem("usuario");
+
+            const resultado = document.getElementById("resultado");
+
+            if (nombre) {
+                resultado.textContent = "Hola, " + nombre;
+            } else {
+                resultado.textContent = "No hay datos guardados";
+            }
+        }
+
+        function eliminar() {
+            localStorage.removeItem("usuario");
+            // sessionStorage.removeItem("usuario");
+            document.getElementById("resultado").textContent = "Dato eliminado.";
+          }
+          
+          function eliminarTodo() {
+            localStorage.clear();
+            // sessionStorage.clear();
+            document.getElementById("resultado").textContent = "Todos los datos eliminados.";
+          }
+
+        btnGuardar.addEventListener("click", function (e) {
+            e.preventDefault();
+            guardar();
+        })
+
+        btnMostrar.addEventListener("click", function (e) {
+            e.preventDefault();
+            mostrar();
+        })
+
+        btnEliminar.addEventListener("click", function (e) {
+            e.preventDefault();
+            eliminar();
+        })
+
+        btnEliminarTodo.addEventListener("click", function (e) {
+            e.preventDefault();
+            eliminarTodo();
+        })
+
+
+    </script>
+
+</body>
+
+</html>

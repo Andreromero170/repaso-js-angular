@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="contenedor">
+        <button>Mostrar Notificacion</button>
+        <button>Mostrar Notificacion 2</button>
+        <button>Mostrar Notificacion 3</button>
+        <button>Mostrar Notificacion 4</button>
+    </div>
+    <script>
+        let padre = document.querySelector(".contenedor");
+        
+        function alerts(event){
+            if (event.target.tagName === 'BUTTON') {
+                const valor = event.target.textContent;
+            alert("Loading code ..... "+valor);
+        }
+    }
+
+        padre.addEventListener("click",alerts);
+    </script>
+
+</body>
+</html>

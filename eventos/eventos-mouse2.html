@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos de Mouse</title>
+</head>
+<body>
+  <button id="btn-click">Haz clic en mí</button>
+  <div id="div-hover" style="width: 200px; height: 200px; background-color: lightblue; margin-top: 20px;">
+    Pasa el mouse aquí
+  </div>
+
+  <script>
+    const btnClick = document.getElementById('btn-click');
+    const divHover = document.getElementById('div-hover');
+
+    // Evento de click
+    btnClick.addEventListener('click', () => {
+      alert('¡Hiciste clic!');
+    });
+
+    // Evento de mouseover
+    divHover.addEventListener('mouseover', () => {
+      divHover.style.backgroundColor = 'lightgreen';
+    });
+
+    // Evento de mouseout
+    divHover.addEventListener('mouseout', () => {
+      divHover.style.backgroundColor = 'lightblue';
+    });
+  </script>
+</body>
+</html>

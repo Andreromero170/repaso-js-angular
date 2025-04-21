@@ -1,0 +1,30 @@
+.mensajeInvalido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:150px;
+    width:400px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 1);
+    color: rgb(153, 2, 2);
+    font-size:20px;
+    margin: auto;
+    margin-top:90px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.mensajeCorrecto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:150px;
+    width:400px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 20px;
+    font-size:20px;
+    text-align: center;
+    background-color: rgb(4, 142, 255);
+    color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top:90px;
+}

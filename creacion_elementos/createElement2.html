@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="miLista">
+        <li>Elemento existente</li>
+    </ul>
+
+
+
+    <script>
+        let lista = document.getElementById("miLista");
+        let nuevoItem = document.createElement("li");
+        nuevoItem.textContent = "Elemento nuevo";
+        lista.appendChild(nuevoItem); // Agrega el <li> al final de la lista
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Remover o eliminar evento</h1>
+    <button id="miBoton">Haz clic</button>
+    <button id="quitar">Quitar evento</button>
+
+    <script>
+        const btn = document.getElementById('miBoton');
+        const quitar = document.getElementById('quitar');
+
+        // Función manejadora (debe estar nombrada)
+        function saludar() {
+            alert('¡Hola!');
+        }
+
+    
+        // Agregamos el evento
+        btn.addEventListener('click', saludar);
+
+        // Quitamos el evento
+        quitar.addEventListener('click', () => {
+            btn.removeEventListener('click', saludar);
+            alert('Evento eliminado');
+        });
+
+    </script>
+</body>
+
+</html>

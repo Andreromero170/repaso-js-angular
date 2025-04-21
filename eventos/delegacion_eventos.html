@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Delegación de Eventos</title>
+</head>
+<body>
+  <ul id="lista">
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+  </ul>
+
+  <script>
+    const lista = document.getElementById('lista');
+
+    // Asignamos el evento al contenedor
+    lista.addEventListener('click', function(event) {
+      // Verificamos si el evento se originó en un <li>
+      if (event.target && event.target.tagName === 'LI') {
+        alert(`Hiciste clic en: ${event.target.textContent}`);
+      }
+    });
+
+    // Añadimos un nuevo elemento dinámicamente
+    const nuevoElemento = document.createElement('li');
+    nuevoElemento.textContent = 'Elemento 4';
+    lista.appendChild(nuevoElemento);
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Creacion de elmentos con JS</h1>
+    <!-- Manejador de un solo evento -->
+    <!--<button id="btn" onclick="crearParrafo()">Haz clic</button>-->
+
+    <button id="btn">Haz clic</button>
+    <script>
+        // Creamos un nuevo párrafo
+
+        function crearParrafo() {
+            let nuevoParrafo = document.createElement("p");
+            nuevoParrafo.textContent = "Hola, soy un párrafo nuevo";
+            document.body.appendChild(nuevoParrafo); // Lo agregamos al final del body
+        }
+
+
+        //Manejador de mas de un evento
+
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            crearParrafo();
+        });
+
+        btn.addEventListener('click', () => {
+           alert('Segunda funcionalidad');
+        });
+
+    </script>
+</body>
+
+</html>

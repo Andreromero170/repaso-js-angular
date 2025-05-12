@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearInterval</title>
+</head>
+<body>
+
+<p id="contador">0</p>
+<button onclick="detener()">Detener</button>
+
+<script>
+  let i = 0;
+  let id = setInterval(() => {
+    document.getElementById("contador").textContent = ++i;
+  }, 1000);
+
+  function detener() {
+    clearInterval(id);
+  }
+</script>
+
+    
+</body>
+</html>

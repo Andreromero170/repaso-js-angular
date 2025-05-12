@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codigo Bloqueante</title>
+</head>
+<body>
+    
+<script>
+    function tareaPesada() {
+        // Simulamos una tarea que bloquea el hilo principal
+        const inicio = Date.now();
+        while (Date.now() - inicio < 5000) {
+          // Espera activa durante 5 segundos
+        }
+        console.log("Tarea pesada completada");
+      }
+      
+      console.log("Inicio del programa");
+      tareaPesada();
+      console.log("Fin del programa");
+      
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout</title>
+</head>
+
+<body>
+
+    <button onclick="mostrarMensaje()">Mostrar mensaje</button>
+    <p id="mensaje"></p>
+
+
+
+    <script>
+
+        //setTimeout(mostrarMensaje,2000);
+        function mostrarMensaje() {
+            document.getElementById("mensaje").textContent = "Cargando...";
+            setTimeout(() => {
+                document.getElementById("mensaje").textContent = "¡Hola desde setTimeout!";
+            }, 2000); // 2 segundos
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronia JS</title>
+</head>
+<body>
+
+    <script>
+        function tareaPesadaAsincrona() {
+            setTimeout(() => {
+              console.log("Tarea pesada asincrónica completada");
+            }, 5000);
+          }
+          
+          console.log("Inicio del programa");
+          tareaPesadaAsincrona();
+          console.log("Fin del programa");
+          
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    
+    <script>
+        function tareaUno(callback) {
+            setTimeout(() => {
+              console.log("Tarea 1 completada");
+              callback();
+            }, 2000);
+          }
+          
+          function tareaDos(callback) {
+            setTimeout(() => {
+              console.log("Tarea 2 completada");
+              callback();
+            }, 1000);
+          }
+          
+          function tareaTres() {
+            console.log("Tarea 3 completada");
+          }
+          
+          console.log("Inicio del programa");
+          
+          tareaUno(() => {
+            tareaDos(() => {
+              tareaTres();
+            });
+          });
+          
+    </script>
+</body>
+</html>
